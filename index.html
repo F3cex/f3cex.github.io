@@ -389,6 +389,28 @@
             width: 0%;
             transition: width 0.1s ease;
         }
+
+        /* Add this to your existing styles */
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 50%;
+            transform: translateX(50%);
+            background: linear-gradient(135deg, #00f2fe, #4facfe);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.5);
+            z-index: 1000;
+            animation: badgePulse 2s infinite;
+        }
+
+        @keyframes badgePulse {
+            0% { transform: translateX(50%) scale(1); }
+            50% { transform: translateX(50%) scale(1.05); }
+            100% { transform: translateX(50%) scale(1); }
+        }
     </style>
 </head>
 <body class="hero-pattern">
@@ -1382,105 +1404,107 @@
                 </div>
 
                 <!-- Pro -->
-                <div class="card-bg p-8 hover-scale transform scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute top-0 right-0 -mt-4 mr-4 bg-gradient-to-r from-primary-glow to-secondary-glow text-white px-4 py-1 rounded-full text-sm">
+                <div class="card-bg p-8 hover-scale transform scale-105 relative overflow-visible" data-aos="fade-up" data-aos-delay="100">
+                    <div class="popular-badge">
                         Most Popular
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">FaceX Pro</h3>
-                    <div class="text-3xl font-bold mb-6 gradient-text">
-                        Starting at $25,000/year
-                    </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Recognition Speed: Professional Processing
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Detection Range: Extended Range
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Advanced Encryption Suite
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Enhanced Database Capacity
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Extended Battery Life
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            24/7 Priority Support + Training
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
-                            </svg>
-                            No Source Code Access
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            AR Display: 1080p Resolution
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Real-time Analytics Dashboard
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                            Private Cloud Deployment
-                        </li>
-                        <div class="mt-6 mb-4 text-red-500 font-semibold">Limitations:</div>
+                    <div class="relative" style="z-index: 10;">
+                        <h3 class="text-2xl font-bold mb-4">FaceX Pro</h3>
+                        <div class="text-3xl font-bold mb-6 gradient-text">
+                            Starting at $25,000/year
+                        </div>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-center text-gray-300">
-                                <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                                 </svg>
-                                No custom AI model training
+                                Recognition Speed: Professional Processing
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                Detection Range: Extended Range
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                Advanced Encryption Suite
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                Enhanced Database Capacity
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                Extended Battery Life
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                24/7 Priority Support + Training
                             </li>
                             <li class="flex items-center text-gray-300">
                                 <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
                                 </svg>
-                                No thermal imaging
+                                No Source Code Access
                             </li>
                             <li class="flex items-center text-gray-300">
-                                <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                                 </svg>
-                                Limited to 50 devices max
+                                AR Display: 1080p Resolution
                             </li>
                             <li class="flex items-center text-gray-300">
-                                <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                                 </svg>
-                                No predictive analytics
+                                Real-time Analytics Dashboard
                             </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                Private Cloud Deployment
+                            </li>
+                            <div class="mt-6 mb-4 text-red-500 font-semibold">Limitations:</div>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                                    </svg>
+                                    No custom AI model training
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                                    </svg>
+                                    No thermal imaging
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                                    </svg>
+                                    Limited to 50 devices max
+                                </li>
+                                <li class="flex items-center text-gray-300">
+                                    <svg class="w-5 h-5 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                                    </svg>
+                                    No predictive analytics
+                                </li>
+                            </ul>
                         </ul>
-                    </ul>
-                    <div class="text-center">
-                        <a href="#contact" class="custom-button px-8 py-3 rounded-full text-white w-full block">Contact Sales</a>
+                        <div class="text-center">
+                            <a href="#contact" class="custom-button px-8 py-3 rounded-full text-white w-full block">Contact Sales</a>
+                        </div>
                     </div>
                 </div>
 
@@ -1814,12 +1838,6 @@
             <div class="w-8 h-8 rounded-full bg-gradient-to-r from-primary-glow to-secondary-glow"></div>
             <div class="w-8 h-8 rounded-full bg-gradient-to-r from-primary-glow to-secondary-glow"></div>
         </div>
-    </div>
-
-    <!-- GitHub Section -->
-    <div class="mt-16 text-center" data-aos="fade-up">
-        <h3 class="text-2xl font-bold mb-6">Join the Development</h3>
-        <p class="text-gray-400 mb-8">Contribute to the future of facial recognition technology. Our project is open source and welcomes community involvement.</p>
     </div>
 
     <!-- Developers Section -->
